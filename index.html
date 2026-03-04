@@ -35,6 +35,49 @@
             overflow-x: hidden;
         }
 
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
         .hero {
             background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
             color: var(--white);
@@ -177,8 +220,6 @@
             transition: all 0.3s ease;
             cursor: pointer;
             border: none;
-            position: relative;
-            overflow: hidden;
         }
 
         .btn-primary {
@@ -248,9 +289,47 @@
             font-weight: 500;
         }
 
-        .services {
+        /* About Section */
+        .about {
             padding: 100px 20px;
             background: var(--white);
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .about-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .about-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .about-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .services {
+            padding: 100px 20px;
+            background: var(--bg-light);
         }
 
         .section-header {
@@ -391,7 +470,7 @@
 
         .how-it-works {
             padding: 100px 20px;
-            background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+            background: var(--white);
         }
 
         .steps-grid {
@@ -402,11 +481,10 @@
         }
 
         .step {
-            background: var(--white);
+            background: var(--bg-light);
             padding: 40px;
             border-radius: 20px;
             position: relative;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
 
@@ -489,7 +567,7 @@
 
         .contact {
             padding: 80px 20px;
-            background: var(--white);
+            background: var(--bg-light);
         }
 
         .contact-grid {
@@ -500,16 +578,18 @@
         }
 
         .contact-card {
-            background: var(--bg-light);
+            background: var(--white);
             padding: 35px;
             border-radius: 16px;
             text-align: center;
             transition: all 0.3s ease;
+            border: 2px solid #E2E8F0;
         }
 
         .contact-card:hover {
-            background: linear-gradient(135deg, rgba(249, 115, 22, 0.05) 0%, rgba(251, 191, 36, 0.05) 100%);
+            border-color: var(--primary);
             transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.1);
         }
 
         .contact-icon {
@@ -611,6 +691,10 @@
             .cta-content h2 {
                 font-size: 32px;
             }
+
+            .nav-links {
+                display: none;
+            }
         }
 
         html {
@@ -620,6 +704,20 @@
 </head>
 <body>
 
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Tubalcain</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -633,17 +731,18 @@
                     No cold calls. No tire-kickers. Just ready-to-install customers.
                 </p>
                 <div class="hero-cta">
-                    <a href="https://tubalcain.systeme.io/solar-portal" class="btn btn-primary">
-                        See How It Works →
+                    <a href="#services" class="btn btn-primary">
+                        View Our Packages
                     </a>
-                    <a href="#services" class="btn btn-secondary">
-                        View Packages
+                    <a href="#contact" class="btn btn-secondary">
+                        Get in Touch
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Stats Section -->
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
@@ -663,11 +762,82 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">About Us</span>
+                <h2 class="section-title">Who We Are</h2>
+                <p class="section-description">
+                    Tubalcain Advertising Agency is a B2B digital marketing agency specializing in lead generation 
+                    for the Nigerian solar energy industry. We help solar installation companies acquire qualified 
+                    homeowner leads through strategic Facebook advertising campaigns.
+                </p>
+            </div>
+
+            <div class="about-content">
+                <p style="font-size: 18px; line-height: 1.8; color: #64748B; margin-bottom: 30px; text-align: center;">
+                    Founded to bridge the gap between Nigerian homeowners seeking reliable solar solutions and 
+                    certified solar installers who can serve them, we operate exclusively in the business-to-business 
+                    (B2B) sector. Our mission is to make solar energy accessible to more Nigerian homes by connecting 
+                    serious buyers with professional installers.
+                </p>
+
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3>Our Mission</h3>
+                        <p>
+                            To accelerate solar energy adoption in Nigeria by connecting qualified homeowners 
+                            with certified solar installers through data-driven digital marketing.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <h3>Our Approach</h3>
+                        <p>
+                            We pre-qualify every lead through a comprehensive 13-question assessment covering 
+                            property ownership, budget, timeline, and home safety requirements.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <h3>Our Guarantee</h3>
+                        <p>
+                            You only receive homeowners who are ready to install within 90 days, own their property, 
+                            have verified budgets, and meet all safety requirements.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 50px; padding: 40px; background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); border-radius: 16px; border-left: 4px solid var(--primary);">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 800; margin-bottom: 20px; color: var(--text-dark);">
+                        Why Solar Companies Trust Us
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                        <div>
+                            <p style="font-size: 32px; font-weight: 900; color: var(--primary); margin-bottom: 5px;">100%</p>
+                            <p style="color: var(--text-light);">Pre-Qualified Leads</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 32px; font-weight: 900; color: var(--primary); margin-bottom: 5px;">48 Hours</p>
+                            <p style="color: var(--text-light);">Campaign Launch</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 32px; font-weight: 900; color: var(--primary); margin-bottom: 5px;">Weekly</p>
+                            <p style="color: var(--text-light);">Performance Reports</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">Our Services</span>
-                <h2 class="section-title">Choose Your Growth Package</h2>
+                <h2 class="section-title">Lead Generation Packages</h2>
                 <p class="section-description">
                     Whether you're testing the waters or scaling fast, we have a package 
                     designed to deliver qualified solar leads to your business.
@@ -681,7 +851,7 @@
                     <p>Test our system risk-free. Perfect for installers who want to see results before committing.</p>
                     <ul class="service-features">
                         <li>7-day trial campaign</li>
-                        <li>15-20 qualified homeowner leads</li>
+                        <li>10-15 qualified homeowner leads</li>
                         <li>Facebook ad management</li>
                         <li>Lead qualification system</li>
                         <li>Real-time WhatsApp delivery</li>
@@ -695,7 +865,7 @@
                     <h3>Standard Weekly</h3>
                     <p>Our most popular package. Consistent weekly lead flow to keep your installation calendar full.</p>
                     <ul class="service-features">
-                        <li>20-30 qualified leads per week</li>
+                        <li>20-25 qualified leads per week</li>
                         <li>Dedicated ad campaigns</li>
                         <li>Advanced targeting</li>
                         <li>Weekly performance reports</li>
@@ -710,7 +880,7 @@
                     <h3>Fast-Track Monthly</h3>
                     <p>Maximum volume for serious installers. Scale your business with premium lead flow.</p>
                     <ul class="service-features">
-                        <li>80-120 qualified leads per month</li>
+                        <li>80-100 qualified leads per month</li>
                         <li>Premium ad placements</li>
                         <li>Real-time SMS + WhatsApp delivery</li>
                         <li>Bi-weekly strategy calls</li>
@@ -723,6 +893,7 @@
         </div>
     </section>
 
+    <!-- How It Works Section -->
     <section class="how-it-works" id="how-it-works">
         <div class="container">
             <div class="section-header">
@@ -791,6 +962,7 @@
         </div>
     </section>
 
+    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
@@ -799,13 +971,14 @@
                     Join successful solar installers across Nigeria who get 20-120 qualified leads monthly. 
                     No contracts. Cancel anytime. Results guaranteed or money back.
                 </p>
-                <a href="https://tubalcain.systeme.io/solar-portal" class="btn btn-primary" style="font-size: 18px; padding: 20px 48px;">
-                    Get Started Today →
+                <a href="#contact" class="btn btn-primary" style="font-size: 18px; padding: 20px 48px;">
+                    Get Started Today
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
@@ -835,11 +1008,13 @@
                     <div class="contact-icon">📍</div>
                     <h3>Location</h3>
                     <p>Warri, Delta State<br>Nigeria</p>
+                    <p style="margin-top: 10px; font-size: 14px;">Monday - Saturday<br>9:00 AM - 6:00 PM WAT</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -849,34 +1024,42 @@
                         B2B lead generation specialists for the Nigerian solar energy industry. 
                         Helping installers scale through strategic digital marketing.
                     </p>
+                    <p style="margin-top: 20px;">
+                        <strong>Business Type:</strong> B2B Lead Generation<br>
+                        <strong>Industry:</strong> Solar Energy Marketing<br>
+                        <strong>Established:</strong> 2026
+                    </p>
                 </div>
 
                 <div class="footer-section">
                     <h4>Services</h4>
-                    <a href="#services">Proof-of-Concept</a>
-                    <a href="#services">Standard Weekly</a>
-                    <a href="#services">Fast-Track Monthly</a>
-                    <a href="https://tubalcain.systeme.io/solar-portal">See How It Works</a>
+                    <a href="#services">Proof-of-Concept (₦35,000)</a>
+                    <a href="#services">Standard Weekly (₦70,000/week)</a>
+                    <a href="#services">Fast-Track Monthly (₦250,000/month)</a>
+                    <a href="#how-it-works">How It Works</a>
                 </div>
 
                 <div class="footer-section">
                     <h4>Company</h4>
-                    <a href="#how-it-works">How It Works</a>
+                    <a href="#about">About Us</a>
                     <a href="#contact">Contact Us</a>
-                    <a href="https://tubalcainmy.github.io/tubalcain-policy/">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="refund.html">Refund Policy</a>
                 </div>
 
                 <div class="footer-section">
-                    <h4>Contact</h4>
+                    <h4>Contact Information</h4>
                     <a href="mailto:tubalcain.my@gmail.com">tubalcain.my@gmail.com</a>
                     <a href="https://wa.me/2348029234994">+234 802 923 4994</a>
                     <p>Warri, Delta State, Nigeria</p>
+                    <p>Operating Hours:<br>Mon-Sat: 9AM - 6PM WAT</p>
                 </div>
             </div>
 
             <div class="footer-bottom">
                 <p>&copy; 2026 Tubalcain Advertising Agency. All rights reserved.</p>
-                <p>Registered Business | B2B Lead Generation | Solar Industry Specialists</p>
+                <p>Registered Business | B2B Lead Generation | Solar Industry Specialists | Warri, Delta State, Nigeria</p>
             </div>
         </div>
     </footer>
