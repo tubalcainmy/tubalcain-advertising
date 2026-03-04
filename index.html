@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tubalcain Advertising Agency - Solar Lead Generation Experts Nigeria</title>
+    <meta name="description" content="B2B lead generation agency delivering 15-120 qualified solar installation leads monthly to Nigerian installers. Guaranteed results.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #F97316;
+            --primary-dark: #EA580C;
+            --secondary: #1E40AF;
+            --accent: #FBBF24;
+            --text-dark: #0F172A;
+            --text-light: #64748B;
+            --bg-light: #F8FAFC;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+            color: var(--white);
+            padding: 120px 20px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(249, 115, 22, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(251, 191, 36, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(249, 115, 22, 0.2);
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            color: var(--accent);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+            animation: slideDown 0.6s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            animation: slideUp 0.8s ease 0.2s both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero .highlight {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .hero-subtitle {
+            font-size: 22px;
+            color: #CBD5E1;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            animation: slideUp 0.8s ease 0.4s both;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideUp 0.8s ease 0.6s both;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(249, 115, 22, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .stats {
+            background: var(--white);
+            padding: 60px 20px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+            background: var(--bg-light);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .services {
+            padding: 100px 20px;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(251, 191, 36, 0.1) 100%);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .section-description {
+            font-size: 18px;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid #E2E8F0;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 20px 60px rgba(249, 115, 22, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .service-features li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .service-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 900;
+            font-size: 18px;
+        }
+
+        .service-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--primary);
+            margin-top: 20px;
+        }
+
+        .service-delivery {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .how-it-works {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .step {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 40px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 900;
+            font-size: 24px;
+            box-shadow: 0 5px 20px rgba(249, 115, 22, 0.3);
+        }
+
+        .step h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+
+        .step p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--text-dark) 0%, #1E293B 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .cta-content p {
+            font-size: 20px;
+            color: #CBD5E1;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .contact {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .contact-card {
+            background: var(--bg-light);
+            padding: 35px;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.05) 0%, rgba(251, 191, 36, 0.05) 100%);
+            transform: translateY(-3px);
+        }
+
+        .contact-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .contact-card h3 {
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .contact-card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: var(--primary-dark);
+        }
+
+        .contact-card p {
+            color: var(--text-light);
+        }
+
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #94A3B8;
+            line-height: 1.8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: #64748B;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .services-grid,
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-content h2 {
+                font-size: 32px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">🚀 Nigeria's #1 Solar Lead Generation Agency</span>
+                <h1>
+                    Stop Chasing Leads.<br>
+                    Start <span class="highlight">Closing Deals</span>.
+                </h1>
+                <p class="hero-subtitle">
+                    We deliver 15-120 pre-qualified homeowners monthly who are ready to buy solar systems. 
+                    No cold calls. No tire-kickers. Just ready-to-install customers.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://tubalcain.systeme.io/solar-portal" class="btn btn-primary">
+                        See How It Works →
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        View Packages
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">1,000+</span>
+                    <span class="stat-label">Qualified Leads Delivered</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">15-25%</span>
+                    <span class="stat-label">Average Close Rate</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">48 Hours</span>
+                    <span class="stat-label">Campaign Launch Time</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Services</span>
+                <h2 class="section-title">Choose Your Growth Package</h2>
+                <p class="section-description">
+                    Whether you're testing the waters or scaling fast, we have a package 
+                    designed to deliver qualified solar leads to your business.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Proof-of-Concept</h3>
+                    <p>Test our system risk-free. Perfect for installers who want to see results before committing.</p>
+                    <ul class="service-features">
+                        <li>7-day trial campaign</li>
+                        <li>15-20 qualified homeowner leads</li>
+                        <li>Facebook ad management</li>
+                        <li>Lead qualification system</li>
+                        <li>Real-time WhatsApp delivery</li>
+                    </ul>
+                    <div class="service-price">₦35,000</div>
+                    <div class="service-delivery">One-time payment | 1 week</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Standard Weekly</h3>
+                    <p>Our most popular package. Consistent weekly lead flow to keep your installation calendar full.</p>
+                    <ul class="service-features">
+                        <li>20-30 qualified leads per week</li>
+                        <li>Dedicated ad campaigns</li>
+                        <li>Advanced targeting</li>
+                        <li>Weekly performance reports</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <div class="service-price">₦70,000/week</div>
+                    <div class="service-delivery">+ ₦50,000 setup fee (one-time)</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔥</div>
+                    <h3>Fast-Track Monthly</h3>
+                    <p>Maximum volume for serious installers. Scale your business with premium lead flow.</p>
+                    <ul class="service-features">
+                        <li>80-120 qualified leads per month</li>
+                        <li>Premium ad placements</li>
+                        <li>Real-time SMS + WhatsApp delivery</li>
+                        <li>Bi-weekly strategy calls</li>
+                        <li>VIP support (24/7)</li>
+                    </ul>
+                    <div class="service-price">₦250,000/month</div>
+                    <div class="service-delivery">Monthly prepayment | Setup fee waived</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">The Process</span>
+                <h2 class="section-title">How Our System Works</h2>
+                <p class="section-description">
+                    From onboarding to lead delivery, we handle everything so you can focus on installations.
+                </p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Quick Onboarding</h3>
+                    <p>
+                        Complete our 10-minute onboarding form. Tell us your service area, 
+                        target customer profile, and system sizes you install.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Campaign Launch</h3>
+                    <p>
+                        We create Facebook ad campaigns, landing pages, and lead qualification 
+                        systems. Your ads go live within 48 hours.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Lead Qualification</h3>
+                    <p>
+                        Our 13-question assessment filters out renters, low-budget prospects, 
+                        and time-wasters. You only receive installation-ready homeowners.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Real-Time Delivery</h3>
+                    <p>
+                        Qualified leads are sent to your WhatsApp instantly. Complete contact 
+                        info, budget, timeline, and system size requirements included.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>You Close Deals</h3>
+                    <p>
+                        Follow up, send quotations, and close deals. We provide scripts and 
+                        templates to help you convert leads into paying customers.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h3>Weekly Reporting</h3>
+                    <p>
+                        Receive detailed performance reports: leads delivered, cost per lead, 
+                        ad metrics, and ROI analysis every week.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Fill Your Installation Calendar?</h2>
+                <p>
+                    Join successful solar installers across Nigeria who get 20-120 qualified leads monthly. 
+                    No contracts. Cancel anytime. Results guaranteed or money back.
+                </p>
+                <a href="https://tubalcain.systeme.io/solar-portal" class="btn btn-primary" style="font-size: 18px; padding: 20px 48px;">
+                    Get Started Today →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Get In Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-description">
+                    Have questions? Want to discuss a custom package? We're here to help.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="mailto:tubalcain.my@gmail.com">tubalcain.my@gmail.com</a>
+                    <p>Response within 24 hours</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/2348029234994">+234 802 923 4994</a>
+                    <p>Instant response during business hours</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Warri, Delta State<br>Nigeria</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Tubalcain Advertising Agency</h4>
+                    <p>
+                        B2B lead generation specialists for the Nigerian solar energy industry. 
+                        Helping installers scale through strategic digital marketing.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <a href="#services">Proof-of-Concept</a>
+                    <a href="#services">Standard Weekly</a>
+                    <a href="#services">Fast-Track Monthly</a>
+                    <a href="https://tubalcain.systeme.io/solar-portal">See How It Works</a>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="https://tubalcainmy.github.io/tubalcain-policy/">Privacy Policy</a>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <a href="mailto:tubalcain.my@gmail.com">tubalcain.my@gmail.com</a>
+                    <a href="https://wa.me/2348029234994">+234 802 923 4994</a>
+                    <p>Warri, Delta State, Nigeria</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tubalcain Advertising Agency. All rights reserved.</p>
+                <p>Registered Business | B2B Lead Generation | Solar Industry Specialists</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
