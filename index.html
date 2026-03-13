@@ -760,6 +760,316 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* ── Case Studies ── */
+        .case-studies {
+            padding: 100px 0;
+            background: var(--bg-light);
+        }
+
+        .cs-stat-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white);
+            border-radius: 20px;
+            border: 2px solid #E2E8F0;
+            padding: 40px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .cs-stat {
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .cs-stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .cs-stat-label {
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .cs-stat-label span {
+            display: block;
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 12px;
+            margin-top: 2px;
+        }
+
+        .cs-stat-divider {
+            width: 1px;
+            height: 60px;
+            background: #E2E8F0;
+            flex-shrink: 0;
+        }
+
+        .cs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            margin-bottom: 60px;
+        }
+
+        .cs-card {
+            background: var(--white);
+            border-radius: 20px;
+            border: 2px solid #E2E8F0;
+            padding: 32px;
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .cs-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 4px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+        }
+
+        .cs-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.10);
+            border-color: var(--primary);
+        }
+
+        .cs-card-featured {
+            border-color: var(--primary);
+            background: linear-gradient(160deg, #fff 70%, rgba(249,115,22,0.04) 100%);
+        }
+
+        .cs-featured-label {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 100px;
+            margin-bottom: 18px;
+        }
+
+        .cs-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            gap: 12px;
+        }
+
+        .cs-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cs-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(249,115,22,0.12), rgba(251,191,36,0.12));
+            border: 2px solid rgba(249,115,22,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .cs-avatar-featured {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            border-color: transparent;
+        }
+
+        .cs-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .cs-location {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        .cs-package {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--primary);
+            background: rgba(249,115,22,0.08);
+            border: 1px solid rgba(249,115,22,0.2);
+            padding: 5px 12px;
+            border-radius: 100px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .cs-package-featured {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            border-color: transparent;
+        }
+
+        .cs-problem {
+            background: #F8FAFC;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .cs-problem-label {
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+
+        .cs-problem p {
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .cs-result-row {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .cs-result-metric {
+            text-align: center;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, rgba(249,115,22,0.06), rgba(251,191,36,0.06));
+            border-radius: 14px;
+            padding: 14px 16px;
+            min-width: 80px;
+        }
+
+        .cs-result-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .cs-result-desc {
+            font-size: 11px;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+
+        .cs-result-quote {
+            flex: 1;
+            position: relative;
+        }
+
+        .cs-quote-mark {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            line-height: 0.6;
+            color: var(--accent);
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .cs-result-quote p {
+            font-size: 13px;
+            color: var(--text-dark);
+            line-height: 1.65;
+            margin: 0;
+            font-style: italic;
+        }
+
+        .cs-verified {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            color: var(--text-light);
+            border-top: 1px solid #F1F5F9;
+            padding-top: 16px;
+        }
+
+        .cs-verified-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #22c55e;
+            flex-shrink: 0;
+            box-shadow: 0 0 0 3px rgba(34,197,94,0.15);
+        }
+
+        .cs-verified-dot-featured {
+            background: var(--primary);
+            box-shadow: 0 0 0 3px rgba(249,115,22,0.15);
+        }
+
+        .cs-bottom-cta {
+            text-align: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, var(--text-dark) 0%, #1e293b 100%);
+            border-radius: 24px;
+        }
+
+        .cs-cta-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 28px;
+            line-height: 1.4;
+        }
+
+        .cs-bottom-cta .btn-primary {
+            display: inline-block;
+            padding: 18px 44px;
+            font-size: 17px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .cs-cta-sub {
+            margin-top: 16px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        @media (max-width: 768px) {
+            .cs-stat-bar { padding: 28px 20px; }
+            .cs-stat-divider { display: none; }
+            .cs-stat-number { font-size: 36px; }
+            .cs-grid { grid-template-columns: 1fr; }
+            .cs-cta-text { font-size: 20px; }
+            .cs-bottom-cta { padding: 40px 24px; }
+        }
+
     </style>
 </head>
 <body>
@@ -787,7 +1097,7 @@
                     Start <span class="highlight">Closing Deals</span>.
                 </h1>
                 <p class="hero-subtitle">
-                    We deliver 15-100 pre-qualified homeowners monthly who are ready to buy solar systems. 
+                    We deliver 15-120 pre-qualified homeowners monthly who are ready to buy solar systems. 
                     No cold calls. No tire-kickers. Just ready-to-install customers.
                 </p>
                 <div class="hero-cta">
@@ -911,7 +1221,7 @@
                     <p>Test our system risk-free. Perfect for installers who want to see results before committing.</p>
                     <ul class="service-features">
                         <li>7-day trial campaign</li>
-                        <li>10-15 qualified homeowner leads</li>
+                        <li>15-20 qualified homeowner leads</li>
                         <li>Facebook ad management</li>
                         <li>Lead qualification system</li>
                         <li>Real-time WhatsApp delivery</li>
@@ -925,7 +1235,7 @@
                     <h3>Standard Weekly</h3>
                     <p>Our most popular package. Consistent weekly lead flow to keep your installation calendar full.</p>
                     <ul class="service-features">
-                        <li>20-25 qualified leads per week</li>
+                        <li>20-30 qualified leads per week</li>
                         <li>Dedicated ad campaigns</li>
                         <li>Advanced targeting</li>
                         <li>Weekly performance reports</li>
@@ -940,16 +1250,14 @@
                     <h3>Fast-Track Monthly</h3>
                     <p>Maximum volume for serious installers. Scale your business with premium lead flow.</p>
                     <ul class="service-features">
-                        <li>80-100 qualified leads per month</li>
+                        <li>80-120 qualified leads per month</li>
                         <li>Premium ad placements</li>
-                        <li>Real-time SMS + Email delivery</li>
-                        <li>The ROI Calculator (Close deals 2X faster)</li>
-                        <li>The Authority Close Kit 1 & 2 (Word for word whatsapp/call template) </li>
+                        <li>Real-time SMS + WhatsApp delivery</li>
                         <li>Bi-weekly strategy calls</li>
                         <li>VIP support (24/7)</li>
                     </ul>
                     <div class="service-price">₦250,000/month</div>
-                    <div class="service-delivery">Monthly prepayment | Setup fee waived (Save ₦20,000 pre week)</div>
+                    <div class="service-delivery">Monthly prepayment | Setup fee waived</div>
                 </div>
             </div>
         </div>
@@ -1040,6 +1348,184 @@
         </div>
     </section>
 
+
+    <!-- Case Studies Section -->
+    <section class="case-studies" id="case-studies">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Real Results</span>
+                <h2 class="section-title">What Happens in the First 7 Days</h2>
+                <p class="section-description">
+                    No long warm-up periods. No guesswork. Our partners see qualified leads
+                    hitting their WhatsApp in the first week — every time.
+                </p>
+            </div>
+
+            <!-- Stat bar -->
+            <div class="cs-stat-bar">
+                <div class="cs-stat">
+                    <div class="cs-stat-number">46</div>
+                    <div class="cs-stat-label">Leads — Week 1<br><span>Abuja Installer</span></div>
+                </div>
+                <div class="cs-stat-divider"></div>
+                <div class="cs-stat">
+                    <div class="cs-stat-number">17</div>
+                    <div class="cs-stat-label">Leads in 6 Days<br><span>Ibadan Installer</span></div>
+                </div>
+                <div class="cs-stat-divider"></div>
+                <div class="cs-stat">
+                    <div class="cs-stat-number">25+</div>
+                    <div class="cs-stat-label">Leads — Week 1<br><span>Warri Installer</span></div>
+                </div>
+                <div class="cs-stat-divider"></div>
+                <div class="cs-stat">
+                    <div class="cs-stat-number">100%</div>
+                    <div class="cs-stat-label">Pre-Qualified<br><span>Every single lead</span></div>
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="cs-grid">
+
+                <div class="cs-card">
+                    <div class="cs-card-top">
+                        <div class="cs-profile">
+                            <div class="cs-avatar">EH</div>
+                            <div class="cs-profile-info">
+                                <div class="cs-name">Eng. Hughes D.</div>
+                                <div class="cs-location">&#128205; Abuja &nbsp;&middot;&nbsp; 11–25 installs/month</div>
+                            </div>
+                        </div>
+                        <div class="cs-package">Fast-Track Monthly</div>
+                    </div>
+                    <div class="cs-problem">
+                        <div class="cs-problem-label">The Problem Before</div>
+                        <p>Team capacity being drained by time-waster site visits — homeowners who were never serious buyers.</p>
+                    </div>
+                    <div class="cs-result-row">
+                        <div class="cs-result-metric">
+                            <div class="cs-result-num">46</div>
+                            <div class="cs-result-desc">qualified leads<br>in Week 1</div>
+                        </div>
+                        <div class="cs-result-quote">
+                            <span class="cs-quote-mark">&ldquo;</span>
+                            <p>His team lead confirmed after Week 1 that he&rsquo;s been very busy with the leads we&rsquo;ve been sending — the exact problem we set out to solve.</p>
+                        </div>
+                    </div>
+                    <div class="cs-verified">
+                        <span class="cs-verified-dot"></span>
+                        Verified &mdash; Google Sheet timestamps &amp; ad account data on file
+                    </div>
+                </div>
+
+                <div class="cs-card">
+                    <div class="cs-card-top">
+                        <div class="cs-profile">
+                            <div class="cs-avatar">VO</div>
+                            <div class="cs-profile-info">
+                                <div class="cs-name">Victor O.</div>
+                                <div class="cs-location">&#128205; Ibadan/Oyo &nbsp;&middot;&nbsp; 4–10 installs/month</div>
+                            </div>
+                        </div>
+                        <div class="cs-package">Proof of Concept</div>
+                    </div>
+                    <div class="cs-problem">
+                        <div class="cs-problem-label">The Problem Before</div>
+                        <p>Low close rate — leads arriving unprepared, unsure about budget, and unwilling to commit on site visits.</p>
+                    </div>
+                    <div class="cs-result-row">
+                        <div class="cs-result-metric">
+                            <div class="cs-result-num">17</div>
+                            <div class="cs-result-desc">leads in 6 days<br>(target was 15)</div>
+                        </div>
+                        <div class="cs-result-quote">
+                            <span class="cs-quote-mark">&ldquo;</span>
+                            <p>Exceeded the trial target. All 17 leads were pre-screened to his exact business qualifications before a single message was sent.</p>
+                        </div>
+                    </div>
+                    <div class="cs-verified">
+                        <span class="cs-verified-dot"></span>
+                        Verified &mdash; Proof of Concept trial period delivery data
+                    </div>
+                </div>
+
+                <div class="cs-card">
+                    <div class="cs-card-top">
+                        <div class="cs-profile">
+                            <div class="cs-avatar">DQ</div>
+                            <div class="cs-profile-info">
+                                <div class="cs-name">Dolapo Q.</div>
+                                <div class="cs-location">&#128205; Lagos &nbsp;&middot;&nbsp; 4–10 installs/month</div>
+                            </div>
+                        </div>
+                        <div class="cs-package">Proof of Concept</div>
+                    </div>
+                    <div class="cs-problem">
+                        <div class="cs-problem-label">The Problem Before</div>
+                        <p>Not enough leads — pipeline dependent on referrals that dried up. Empty months becoming the norm.</p>
+                    </div>
+                    <div class="cs-result-row">
+                        <div class="cs-result-metric">
+                            <div class="cs-result-num">7</div>
+                            <div class="cs-result-desc">days to more leads<br>than he could handle</div>
+                        </div>
+                        <div class="cs-result-quote">
+                            <span class="cs-quote-mark">&ldquo;</span>
+                            <p>By Day 7 his team had more qualified leads than they could handle — all delivered from our Proof of Concept package alone.</p>
+                        </div>
+                    </div>
+                    <div class="cs-verified">
+                        <span class="cs-verified-dot"></span>
+                        Verified &mdash; Lead delivery timestamps on file
+                    </div>
+                </div>
+
+                <div class="cs-card cs-card-featured">
+                    <div class="cs-featured-label">Most Recent Result</div>
+                    <div class="cs-card-top">
+                        <div class="cs-profile">
+                            <div class="cs-avatar cs-avatar-featured">EP</div>
+                            <div class="cs-profile-info">
+                                <div class="cs-name">Eng. Pius</div>
+                                <div class="cs-location">&#128205; Warri &nbsp;&middot;&nbsp; Standard Package</div>
+                            </div>
+                        </div>
+                        <div class="cs-package cs-package-featured">Standard</div>
+                    </div>
+                    <div class="cs-problem">
+                        <div class="cs-problem-label">The Problem Before</div>
+                        <p>Inconsistent pipeline — too reliant on word of mouth with no reliable weekly flow of qualified homeowners.</p>
+                    </div>
+                    <div class="cs-result-row">
+                        <div class="cs-result-metric">
+                            <div class="cs-result-num">25+</div>
+                            <div class="cs-result-desc">qualified leads<br>in Week 1</div>
+                        </div>
+                        <div class="cs-result-quote">
+                            <span class="cs-quote-mark">&ldquo;</span>
+                            <p>Results arrived so fast he had to pause the service to work through the backlog of leads we had already delivered to him.</p>
+                        </div>
+                    </div>
+                    <div class="cs-verified">
+                        <span class="cs-verified-dot cs-verified-dot-featured"></span>
+                        Verified &mdash; Standard package Week 1 delivery data on file
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="cs-bottom-cta">
+                <p class="cs-cta-text">Every one of these results started with a single qualifying conversation.</p>
+                <a href="https://wa.me/2348029234994?text=Hi%2C%20I%20saw%20your%20case%20studies%20and%20want%20to%20find%20out%20if%20my%20business%20qualifies" class="btn btn-primary" target="_blank" rel="noopener">
+                    See If Your Business Qualifies &rarr;
+                </a>
+                <p class="cs-cta-sub">4 installer slots currently available</p>
+            </div>
+
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -1055,7 +1541,7 @@
                 <div class="contact-card">
                     <div class="contact-icon">📧</div>
                     <h3>Email</h3>
-                    <a href="mailto:tubalcain.my@gmail.com">tubalcain.my@gmail.com</a>
+                    <a href="/cdn-cgi/l/email-protection#60141502010c0301090e4e0d1920070d01090c4e030f0d"><span class="__cf_email__" data-cfemail="a0d4d5c2c1ccc3c1c9ce8ecdd9e0c7cdc1c9cc8ec3cfcd">[email&#160;protected]</span></a>
                     <p>Response within 24 hours</p>
                 </div>
 
@@ -1112,19 +1598,11 @@
 
                 <div class="footer-section">
                     <h4>Contact Information</h4>
-                    <a href="mailto:tubalcain.my@gmail.com">tubalcain.my@gmail.com</a>
+                    <a href="/cdn-cgi/l/email-protection#1b6f6e797a77787a72753576625b7c767a727735787476"><span class="__cf_email__" data-cfemail="f6828394979a95979f98d89b8fb6919b979f9ad895999b">[email&#160;protected]</span></a>
                     <a href="https://wa.me/2348029234994">+234 802 923 4994</a>
                     <p>Warri, Delta State, Nigeria</p>
                     <p>Operating Hours:<br>Mon-Sat: 9AM - 6PM WAT</p>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2026 Tubalcain Advertising Agency. All rights reserved.</p>
-                <p>Registered Business | B2B Lead Generation | Solar Industry Specialists | Warri, Delta State, Nigeria</p>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+            <div class="footer-bo
