@@ -1070,6 +1070,168 @@
             .cs-bottom-cta { padding: 40px 24px; }
         }
 
+        /* ── Guarantee Section ── */
+        .guarantee-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+ 
+        .guarantee-story {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+ 
+        .guarantee-story-card {
+            background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+            border: 2px solid #86EFAC;
+            border-radius: 24px;
+            padding: 52px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+ 
+        .guarantee-story-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 5px;
+            background: linear-gradient(90deg, #22c55e 0%, #86efac 100%);
+        }
+ 
+        .guarantee-story-card::after {
+            content: '¹3';
+            position: absolute;
+            bottom: -30px;
+            right: -10px;
+            font-size: 180px;
+            color: rgba(34,197,94,0.06);
+            font-weight: 900;
+            line-height: 1;
+            pointer-events: none;
+        }
+ 
+        .guarantee-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(34,197,94,0.15);
+            border: 1px solid rgba(34,197,94,0.3);
+            color: #15803d;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+ 
+        .guarantee-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 0 3px rgba(34,197,94,0.25);
+            flex-shrink: 0;
+            display: inline-block;
+        }
+ 
+        .guarantee-story-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+ 
+        .guarantee-story-card .story-body {
+            font-size: 17px;
+            color: #374151;
+            line-height: 1.85;
+            margin-bottom: 20px;
+        }
+ 
+        .story-outcome {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: rgba(34,197,94,0.1);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-top: 28px;
+        }
+ 
+        .story-outcome-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+ 
+        .story-outcome p {
+            font-size: 15px;
+            color: #166534;
+            font-weight: 600;
+            line-height: 1.6;
+            margin: 0;
+        }
+ 
+        .guarantee-box {
+            background: var(--text-dark);
+            border-radius: 20px;
+            padding: 44px 52px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+ 
+        .guarantee-shield {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            flex-shrink: 0;
+            box-shadow: 0 8px 24px rgba(34,197,94,0.3);
+        }
+ 
+        .guarantee-box-content {
+            flex: 1;
+            min-width: 240px;
+        }
+ 
+        .guarantee-box-content h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+ 
+        .guarantee-box-content p {
+            font-size: 16px;
+            color: #CBD5E1;
+            line-height: 1.7;
+            margin: 0;
+        }
+ 
+        .guarantee-box-content p strong {
+            color: #86efac;
+        }
+ 
+        @media (max-width: 768px) {
+            .guarantee-story-card { padding: 32px 24px; }
+            .guarantee-story-card h3 { font-size: 24px; }
+            .guarantee-box { padding: 32px 24px; gap: 24px; }
+            .guarantee-shield { width: 60px; height: 60px; font-size: 28px; }
+            .guarantee-box-content h4 { font-size: 20px; }
+        }
+
     </style>
 </head>
 <body>
@@ -1171,10 +1333,12 @@
                     </div>
 
                     <div class="about-card">
-                        <h3>Our Guarantee</h3>
+                        <h3>Our Delivery Guarantee</h3>
                         <p>
-                            You only receive homeowners who are ready to install within 90 days, own their property, 
-                            have verified budgets, and meet all safety requirements.
+                            If we miss your agreed lead volume within the service period, we do not stop.
+                            We keep running your campaign and delivering leads at no extra cost until we
+                            hit the number we promised. No excuses. No refunds needed — because we do not
+                            stop until it is done.
                         </p>
                     </div>
                 </div>
@@ -1515,6 +1679,64 @@
                 </div>
 
             </div>
+
+            <!-- Guarantee Section -->
+    <section class="guarantee-section" id="guarantee">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Promise</span>
+                <h2 class="section-title">What Our Guarantee Looks Like in Practice</h2>
+                <p class="section-description">
+                    Any agency can promise results. Here is what we actually did when we fell short.
+                </p>
+            </div>
+ 
+            <div class="guarantee-story">
+ 
+                <div class="guarantee-story-card">
+                    <div class="guarantee-eyebrow">
+                        <span class="guarantee-dot"></span>
+                        A Real Story &mdash; Not a Marketing Line
+                    </div>
+                    <h3>We Missed Our Timeline.<br>Here Is What We Did Next.</h3>
+                    <p class="story-body">
+                        Earlier this year we took on a client and missed our lead delivery timeline.
+                        We did not send a generic apology or offer a partial refund. We called him directly,
+                        told him the truth, and kept running his campaign &mdash; delivering leads at no extra
+                        cost &mdash; until we hit every number we had originally promised.
+                    </p>
+                    <p class="story-body">
+                        Four days later, we delivered the full volume. He was not just satisfied &mdash;
+                        he reached back out and is currently working with us on his next project.
+                    </p>
+                    <p class="story-body" style="font-style: italic; color: #6B7280;">
+                        That is not a marketing story. That is how we handle the times when things do not
+                        go perfectly. And it is why our partners stay.
+                    </p>
+                    <div class="story-outcome">
+                        <div class="story-outcome-icon">&#128257;</div>
+                        <p>The client who experienced our guarantee first-hand came back for a second project.
+                        Accountability builds the kind of trust that no ad campaign can manufacture.</p>
+                    </div>
+                </div>
+ 
+                <div class="guarantee-box">
+                    <div class="guarantee-shield">&#128737;</div>
+                    <div class="guarantee-box-content">
+                        <h4>The Volume Guarantee &mdash; On Every Package</h4>
+                        <p>
+                            If we miss your agreed lead volume within the service period,
+                            <strong>we do not stop</strong>. We keep running your campaign and delivering
+                            leads at no extra cost to you until we reach the number we promised.
+                            No excuses. No refunds needed &mdash;
+                            <strong>because we do not stop until it is done.</strong>
+                        </p>
+                    </div>
+                </div>
+ 
+            </div>
+        </div>
+    </section>
             
             <!-- Bottom CTA -->
             <div class="cs-bottom-cta">
