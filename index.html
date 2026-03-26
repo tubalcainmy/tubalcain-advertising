@@ -7,61 +7,15 @@
     <meta name="description" content="B2B lead generation agency delivering 15-120 qualified solar installation leads monthly to Nigerian installers. Guaranteed results.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@700;800;900&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@700;800;900&display=swap"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"></noscript>
 
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZ6FE345VT"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-TZ6FE345VT', {
-            'send_page_view': true
-        });
-
-        // Track button clicks
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.btn-primary').forEach(function(button) {
-                button.addEventListener('click', function() {
-                    gtag('event', 'button_click', {
-                        'event_category': 'CTA',
-                        'event_label': this.textContent.trim(),
-                        'value': 1
-                    });
-                });
-            });
-            document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
-                link.addEventListener('click', function() {
-                    gtag('event', 'contact', {
-                        'event_category': 'Contact',
-                        'event_label': 'WhatsApp',
-                        'value': 1
-                    });
-                });
-            });
-            document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
-                link.addEventListener('click', function() {
-                    gtag('event', 'contact', {
-                        'event_category': 'Contact',
-                        'event_label': 'Email',
-                        'value': 1
-                    });
-                });
-            });
-            document.querySelectorAll('.nav-links a').forEach(function(link) {
-                link.addEventListener('click', function() {
-                    gtag('event', 'navigation', {
-                        'event_category': 'Navigation',
-                        'event_label': this.textContent.trim(),
-                        'value': 1
-                    });
-                });
-            });
-        });
-    </script>
-    <!-- End Google Analytics 4 -->
+    <!-- GA moved to bottom -->
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1056,7 +1010,96 @@
         .guarantee-box-content p { font-size: 16px; color: #CBD5E1; line-height: 1.7; margin: 0; }
         .guarantee-box-content p strong { color: #86efac; }
         @media (max-width: 768px) { .guarantee-story-card { padding: 32px 24px; } .guarantee-story-card h3 { font-size: 24px; } .guarantee-box { padding: 32px 24px; gap: 24px; } .guarantee-shield { width: 60px; height: 60px; font-size: 28px; } .guarantee-box-content h4 { font-size: 20px; } }
-    </style>
+    
+        /* ── FREE RESOURCES SECTION ── */
+        .free-resources-section { padding: 88px 0; background: #0B1120; border-top: 1px solid #1E293B; border-bottom: 1px solid #1E293B; }
+        .download-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; max-width: 860px; margin-left: auto; margin-right: auto; }
+        .download-card { background: #1E293B; border: 1px solid #334155; border-radius: 8px; padding: 32px; display: flex; flex-direction: column; gap: 16px; }
+        .dl-blue  { border-top: 3px solid #3B82F6; }
+        .dl-amber { border-top: 3px solid #F59E0B; }
+        .dl-icon  { font-size: 28px; }
+        .dl-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+        .dl-badge-blue  { color: #3B82F6; }
+        .dl-badge-amber { color: #F59E0B; }
+        .dl-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; color: #F5F0E8; line-height: 1.2; margin: 0; }
+        .dl-desc  { font-size: 14px; color: #94A3B8; line-height: 1.65; margin: 0; }
+        .dl-features { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+        .dl-features li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: #94A3B8; line-height: 1.5; }
+        .dl-check { font-weight: 700; flex-shrink: 0; }
+        .dl-check.blue  { color: #3B82F6; }
+        .dl-check.amber { color: #F59E0B; }
+        .dl-btn { width: 100%; justify-content: center; cursor: pointer; border: none; font-size: 15px; }
+        .dl-btn-amber { background: linear-gradient(135deg, #D97706, #F59E0B) !important; box-shadow: 0 6px 20px rgba(245,158,11,0.25) !important; }
+        .dl-note { font-size: 11px; color: #475569; text-align: center; margin: 0; }
+        @media (max-width: 640px) { .download-grid { grid-template-columns: 1fr; } }
+
+        /* ── DOWNLOAD POPUP MODAL ── */
+        .dlmodal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); backdrop-filter:blur(6px); z-index:9000; align-items:center; justify-content:center; padding:20px; }
+        .dlmodal-overlay.open { display:flex; animation:dlFadeIn 0.25s ease both; }
+        @keyframes dlFadeIn { from{opacity:0;} to{opacity:1;} }
+        .dlmodal { background:#1E293B; border:1px solid #334155; border-radius:8px; width:100%; max-width:520px; max-height:92vh; overflow-y:auto; position:relative; animation:dlSlideUp 0.3s ease both; scrollbar-width:none; }
+        .dlmodal::-webkit-scrollbar { display:none; }
+        @keyframes dlSlideUp { from{opacity:0;transform:translateY(20px);} to{opacity:1;transform:translateY(0);} }
+        .dlmodal-close { position:absolute; top:14px; right:14px; width:30px; height:30px; background:#334155; border:none; border-radius:50%; color:#94A3B8; font-size:14px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.2s; z-index:10; }
+        .dlmodal-close:hover { background:#475569; color:#F1F5F9; }
+        .dlmodal-head { padding:28px 28px 20px; border-bottom:1px solid #334155; }
+        .dlmodal-badge { font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#3B82F6; margin-bottom:8px; display:block; }
+        .dlmodal-title { font-family:'Playfair Display',serif; font-size:22px; font-weight:800; color:#F1F5F9; margin:0 0 6px; line-height:1.15; }
+        .dlmodal-sub { font-size:13px; color:#94A3B8; line-height:1.55; margin:0; }
+        /* Progress */
+        .dlprogress-wrap { padding:16px 28px 0; }
+        .dlprogress-steps { display:flex; align-items:center; gap:0; margin-bottom:8px; }
+        .dlstep-node { width:24px; height:24px; border-radius:50%; border:2px solid #334155; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; color:#475569; flex-shrink:0; background:#0F172A; transition:all 0.3s; }
+        .dlstep-node.active { border-color:#3B82F6; color:#3B82F6; background:rgba(59,130,246,0.08); }
+        .dlstep-node.done   { border-color:#22C55E; background:rgba(34,197,94,0.1); color:#22C55E; }
+        .dlstep-line { flex:1; height:2px; background:#334155; transition:background 0.3s; }
+        .dlstep-line.done { background:#22C55E; }
+        .dlprogress-track { height:3px; background:#334155; border-radius:2px; overflow:hidden; }
+        .dlprogress-fill { height:100%; background:linear-gradient(90deg,#3B82F6,#60A5FA); border-radius:2px; transition:width 0.4s ease; width:0%; }
+        /* Questions */
+        .dlbody { padding:24px 28px; }
+        .dlblock { display:none; }
+        .dlblock.active { display:block; animation:dlFadeIn 0.2s ease both; }
+        .dllabel { font-size:10px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#475569; margin-bottom:8px; font-family:'DM Sans',sans-serif; }
+        .dltitle { font-size:16px; font-weight:700; color:#F1F5F9; line-height:1.35; margin-bottom:5px; }
+        .dlsub { font-size:12px; color:#64748B; line-height:1.55; margin-bottom:16px; }
+        .dloptions { display:flex; flex-direction:column; gap:8px; }
+        .dloption { display:flex; align-items:center; gap:10px; padding:12px 14px; background:#0F172A; border:1px solid #334155; border-radius:4px; cursor:pointer; transition:all 0.2s; text-align:left; width:100%; }
+        .dloption:hover { border-color:#475569; background:rgba(255,255,255,0.02); }
+        .dloption.selected { border-color:#3B82F6; background:rgba(59,130,246,0.06); }
+        .dlopt-radio { width:16px; height:16px; border-radius:50%; border:2px solid #334155; flex-shrink:0; transition:all 0.2s; display:flex; align-items:center; justify-content:center; }
+        .dloption.selected .dlopt-radio { border-color:#3B82F6; background:#3B82F6; }
+        .dloption.selected .dlopt-radio::after { content:''; width:5px; height:5px; border-radius:50%; background:#fff; }
+        .dlopt-text { font-size:13px; font-weight:500; color:#CBD5E1; line-height:1.4; }
+        .dlerr { font-size:12px; color:#F87171; margin-top:6px; display:none; }
+        /* Fields */
+        .dlfields { display:flex; flex-direction:column; gap:12px; }
+        .dlfield label { display:block; font-size:10px; font-weight:700; color:#64748B; margin-bottom:4px; letter-spacing:0.08em; text-transform:uppercase; font-family:'DM Sans',sans-serif; }
+        .dlfield-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+        .dlfield input { width:100%; background:#0F172A; border:1px solid #334155; border-radius:4px; padding:10px 12px; font-size:14px; color:#F1F5F9; font-family:'DM Sans',sans-serif; outline:none; transition:border-color 0.2s; }
+        .dlfield input::placeholder { color:#475569; }
+        .dlfield input:focus { border-color:#3B82F6; }
+        /* Nav */
+        .dlnav { display:flex; align-items:center; justify-content:space-between; margin-top:18px; gap:10px; }
+        .dlbtn-back { background:transparent; border:1px solid #334155; color:#64748B; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:700; padding:10px 16px; border-radius:4px; cursor:pointer; transition:all 0.2s; }
+        .dlbtn-back:hover { border-color:#64748B; color:#CBD5E1; }
+        .dlbtn-next { flex:1; background:#3B82F6; border:none; color:#fff; font-family:'DM Sans',sans-serif; font-size:14px; font-weight:700; padding:12px 18px; border-radius:4px; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; justify-content:center; gap:8px; }
+        .dlbtn-next:hover { background:#2563EB; transform:translateY(-1px); }
+        .dlbtn-next:disabled { background:#334155; cursor:not-allowed; transform:none; }
+        /* Result */
+        .dlresult { display:none; padding:32px 28px; text-align:center; }
+        .dlresult.show { display:block; animation:dlFadeIn 0.3s ease both; }
+        .dlresult-icon { font-size:48px; margin-bottom:14px; }
+        .dlresult-title { font-family:'Playfair Display',serif; font-size:26px; font-weight:800; color:#F1F5F9; margin-bottom:10px; }
+        .dlresult-sub { font-size:14px; color:#94A3B8; line-height:1.7; margin-bottom:22px; }
+        .dlresult-sub strong { color:#F1F5F9; }
+        .dlresult-btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:14px 20px; border-radius:4px; font-family:'DM Sans',sans-serif; font-size:14px; font-weight:700; text-decoration:none; transition:all 0.2s; margin-bottom:10px; }
+        .dlresult-btn.primary { background:#25D366; color:#fff; }
+        .dlresult-btn.primary:hover { background:#1ea750; transform:translateY(-2px); }
+        .dlresult-btn.secondary { background:transparent; border:1px solid #334155; color:#64748B; }
+        .dlresult-btn.secondary:hover { border-color:#64748B; color:#CBD5E1; }
+        @media (max-width:600px) { .dlmodal-head,.dlbody { padding-left:18px; padding-right:18px; } .dlprogress-wrap { padding-left:18px; padding-right:18px; } .dlfield-row { grid-template-columns:1fr; } .dlresult { padding-left:18px; padding-right:18px; } }
+</style>
 </head>
 <body>
 
@@ -1066,7 +1109,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#offer">Packages</a></li>
+                <li><a href="#free-resources">Free Tools</a><a href="#offer">Packages</a></li>
                 <li><a href="#case-studies">Results</a></li>
                 <li><a href="#guarantee">Guarantee</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1329,7 +1372,54 @@
   </div>
 </section>
 
-    <!-- OFFER SECTION -->
+    
+    <!-- FREE RESOURCES SECTION -->
+    <section class="free-resources-section" id="free-resources">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Free Tools</span>
+          <h2 class="section-title">Two Free Resources.<br>Zero Cost to Get Started.</h2>
+          <p class="section-description">These tools are used by our DFY partners on every site visit and sales call. Download them free — we send the link directly to your WhatsApp.</p>
+        </div>
+        <div class="download-grid">
+
+          <div class="download-card dl-blue">
+            <div class="dl-icon">📘</div>
+            <div class="dl-badge dl-badge-blue">Free Download</div>
+            <h3 class="dl-title">The ABC Solar<br>Lead Playbook</h3>
+            <p class="dl-desc">The complete ABC filtering system — step by step. Attract homeowners with confidence, filter time-wasters automatically, and close more jobs with less effort.</p>
+            <ul class="dl-features">
+              <li><span class="dl-check blue">✓</span> Ad copy that pre-qualifies buyers before they click</li>
+              <li><span class="dl-check blue">✓</span> The 8-question filter that removes time-wasters automatically</li>
+              <li><span class="dl-check blue">✓</span> Word-for-word WhatsApp close scripts from live campaigns</li>
+            </ul>
+            <button class="btn btn-primary dl-btn dl-btn-blue" onclick="openDownloadPopup('playbook')">
+              Get the Free Playbook →
+            </button>
+            <p class="dl-note">We send the PDF link via WhatsApp instantly &nbsp;·&nbsp; Free</p>
+          </div>
+
+          <div class="download-card dl-amber">
+            <div class="dl-icon">⚡</div>
+            <div class="dl-badge dl-badge-amber">Free Tool</div>
+            <h3 class="dl-title">ABC Solar Load<br>Calculator</h3>
+            <p class="dl-desc">Professional interactive energy load calculator for site visits. Enter the homeowner's appliances — get exact system size and cost in seconds. Works fully offline.</p>
+            <ul class="dl-features">
+              <li><span class="dl-check amber">✓</span> Exact system size from appliance list in under 30 seconds</li>
+              <li><span class="dl-check amber">✓</span> Works fully offline — bookmark once, use on any site visit</li>
+              <li><span class="dl-check amber">✓</span> Professional output that builds homeowner trust before quotation</li>
+            </ul>
+            <button class="btn btn-primary dl-btn dl-btn-amber" onclick="openDownloadPopup('calculator')">
+              Get the Free Calculator →
+            </button>
+            <p class="dl-note">We send the tool link via WhatsApp instantly &nbsp;·&nbsp; Free</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+<!-- OFFER SECTION -->
     <section class="offer-section" id="offer">
       <div class="container">
         <div class="section-header">
@@ -1776,7 +1866,7 @@
                 <p class="section-description">Have questions? Want to discuss a custom package? We're here to help.</p>
             </div>
             <div class="contact-grid">
-                <div class="contact-card"><div class="contact-icon">📧</div><h3>Email</h3><a href="mailto:tubalcain.my@gmail.com">[Mail Protected]</a><p>Response within 24 hours</p></div>
+                <div class="contact-card"><div class="contact-icon">📧</div><h3>Email</h3><a href="/cdn-cgi/l/email-protection#54202136353837353d3a7a392d143339353d387a373b39">[Mail Protected]</a><p>Response within 24 hours</p></div>
                 <div class="contact-card"><div class="contact-icon">📱</div><h3>WhatsApp</h3><a href="https://wa.me/2348029234994">+234 802 923 4994</a><p>Instant response during business hours</p></div>
                 <div class="contact-card"><div class="contact-icon">📍</div><h3>Location</h3><p>Warri, Delta State<br>Nigeria</p><p style="margin-top:10px;font-size:14px;">Monday - Saturday<br>9:00 AM - 6:00 PM WAT</p></div>
             </div>
@@ -1809,17 +1899,378 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contact Information</h4>
-                    <a href="mailto:tubalcain.my@gmail.com">[Mail Protected]</a>
+                    <a href="/cdn-cgi/l/email-protection#b7c3c2d5d6dbd4d6ded999dacef7d0dad6dedb99d4d8da">[Mail Protected]</a>
                     <a href="https://wa.me/2348029234994">+234 802 923 4994</a>
                     <p>Warri, Delta State, Nigeria</p>
                     <p>Operating Hours:<br>Mon-Sat: 9AM - 6PM WAT</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Tubalcain Advertising Agency &copy; 2025 &nbsp;·&nbsp; Nigeria's Solar Lead Generation Specialists</p>
+                <p>Tubalcain Advertising Agency &copy; 2025 &nbsp;·&nbsp; Nigeria's Solar Lead Generation Specialists &nbsp;·&nbsp; All Rights Reserved</p>
             </div>
         </div>
     </footer>
+
+<!-- ═══════════════════════════════════════
+     DOWNLOAD POPUP MODAL
+     No disqualify logic — data collection only
+     Fires Make.com webhook on submit
+═══════════════════════════════════════ -->
+<div class="dlmodal-overlay" id="dlOverlay" onclick="handleDlOverlayClick(event)">
+  <div class="dlmodal" id="dlModal">
+    <button class="dlmodal-close" onclick="closeDlPopup()" aria-label="Close">&#x2715;</button>
+
+    <div class="dlmodal-head">
+      <span class="dlmodal-badge" id="dlModalBadge">Free Download</span>
+      <div class="dlmodal-title" id="dlModalTitle">One Last Step to Get Your Free Resource</div>
+      <div class="dlmodal-sub">Help us understand your business so we can send you the right tools and better serve you.</div>
+    </div>
+
+    <div class="dlprogress-wrap">
+      <div class="dlprogress-steps">
+        <div class="dlstep-node active" id="dlsn1">1</div>
+        <div class="dlstep-line" id="dlsl1"></div>
+        <div class="dlstep-node" id="dlsn2">2</div>
+        <div class="dlstep-line" id="dlsl2"></div>
+        <div class="dlstep-node" id="dlsn3">3</div>
+        <div class="dlstep-line" id="dlsl3"></div>
+        <div class="dlstep-node" id="dlsn4">4</div>
+        <div class="dlstep-line" id="dlsl4"></div>
+        <div class="dlstep-node" id="dlsn5">&#x2713;</div>
+      </div>
+      <div class="dlprogress-track">
+        <div class="dlprogress-fill" id="dlProgressFill"></div>
+      </div>
+    </div>
+
+    <div class="dlbody">
+
+      <div class="dlblock active" id="dlq1">
+        <div class="dllabel">Question 1 of 4</div>
+        <div class="dltitle">Are you currently spending money on Facebook or Instagram ads to get solar leads?</div>
+        <div class="dlsub">This helps us understand where you are in your marketing journey.</div>
+        <div class="dloptions">
+          <button class="dloption" data-dq="1" data-val="spend-100k-plus" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">Yes &#8212; I spend &#8358;100,000 or more monthly on ads</span></button>
+          <button class="dloption" data-dq="1" data-val="spend-50k-plus" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">Yes &#8212; I spend &#8358;50,000 or more monthly on ads</span></button>
+          <button class="dloption" data-dq="1" data-val="referrals-only" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">No &#8212; I rely mostly on referrals and word of mouth</span></button>
+          <button class="dloption" data-dq="1" data-val="not-started" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">No &#8212; I have not started advertising yet</span></button>
+        </div>
+        <div class="dlerr" id="dlerr1">Please select an option to continue.</div>
+        <div class="dlnav"><button class="dlbtn-next" onclick="nextDlQ(1)">Continue &#8594;</button></div>
+      </div>
+
+      <div class="dlblock" id="dlq2">
+        <div class="dllabel">Question 2 of 4</div>
+        <div class="dltitle">How many residential solar installations does your team complete per month?</div>
+        <div class="dlsub">This helps us send you the most relevant information for your scale.</div>
+        <div class="dloptions">
+          <button class="dloption" data-dq="2" data-val="1-3" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">1 &#8211; 3 installations per month</span></button>
+          <button class="dloption" data-dq="2" data-val="4-10" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">4 &#8211; 10 installations per month</span></button>
+          <button class="dloption" data-dq="2" data-val="11-25" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">11 &#8211; 25 installations per month</span></button>
+          <button class="dloption" data-dq="2" data-val="25plus" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">More than 25 per month</span></button>
+        </div>
+        <div class="dlerr" id="dlerr2">Please select an option to continue.</div>
+        <div class="dlnav">
+          <button class="dlbtn-back" onclick="prevDlQ(1)">&#8592; Back</button>
+          <button class="dlbtn-next" onclick="nextDlQ(2)">Continue &#8594;</button>
+        </div>
+      </div>
+
+      <div class="dlblock" id="dlq3">
+        <div class="dllabel">Question 3 of 4</div>
+        <div class="dltitle">What is your biggest challenge with leads right now?</div>
+        <div class="dlsub">Choose the one that best describes your current situation.</div>
+        <div class="dloptions">
+          <button class="dloption" data-dq="3" data-val="not-enough-leads" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">Not enough leads &#8212; inconsistent pipeline</span></button>
+          <button class="dloption" data-dq="3" data-val="time-wasters" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">Too many time-wasters &#8212; enquiries that go nowhere</span></button>
+          <button class="dloption" data-dq="3" data-val="inconsistent-revenue" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">Inconsistent monthly revenue &#8212; feast or famine</span></button>
+          <button class="dloption" data-dq="3" data-val="low-close-rate" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">Low closing rate &#8212; I get leads but struggle to convert</span></button>
+        </div>
+        <div class="dlerr" id="dlerr3">Please select an option to continue.</div>
+        <div class="dlnav">
+          <button class="dlbtn-back" onclick="prevDlQ(2)">&#8592; Back</button>
+          <button class="dlbtn-next" onclick="nextDlQ(3)">Continue &#8594;</button>
+        </div>
+      </div>
+
+      <div class="dlblock" id="dlq4">
+        <div class="dllabel">Question 4 of 4</div>
+        <div class="dltitle">If a consistent flow of pre-qualified homeowners came to your WhatsApp this week &#8212; is your team ready to follow up?</div>
+        <div class="dlsub">No wrong answer &#8212; this helps us send the right resources.</div>
+        <div class="dloptions">
+          <button class="dloption" data-dq="4" data-val="ready-now" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">Yes &#8212; we have the team and process ready now</span></button>
+          <button class="dloption" data-dq="4" data-val="need-a-week" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">Almost &#8212; we need about a week to get ready</span></button>
+          <button class="dloption" data-dq="4" data-val="not-ready" onclick="selectDlQ(this)"><div class="dlopt-radio"></div><span class="dlopt-text">Not yet &#8212; still building the foundation</span></button>
+        </div>
+        <div class="dlerr" id="dlerr4">Please select an option to continue.</div>
+        <div class="dlnav">
+          <button class="dlbtn-back" onclick="prevDlQ(3)">&#8592; Back</button>
+          <button class="dlbtn-next" onclick="nextDlQ(4)">Continue &#8594;</button>
+        </div>
+      </div>
+
+      <div class="dlblock" id="dlq5">
+        <div class="dllabel">Almost There</div>
+        <div class="dltitle">Where should we send your free resource?</div>
+        <div class="dlsub">We will send the download link directly to your WhatsApp within minutes.</div>
+        <div class="dlfields">
+          <div class="dlfield-row">
+            <div class="dlfield"><label>First Name</label><input type="text" id="dlfirst" placeholder="Chukwuemeka" autocomplete="given-name"></div>
+            <div class="dlfield"><label>Last Name</label><input type="text" id="dllast" placeholder="Okafor" autocomplete="family-name"></div>
+          </div>
+          <div class="dlfield"><label>WhatsApp Number</label><input type="tel" id="dlphone" placeholder="08012345678" autocomplete="tel"></div>
+          <div class="dlfield"><label>City / State</label><input type="text" id="dlcity" placeholder="Lagos / Abuja / Port Harcourt"></div>
+        </div>
+        <div class="dlerr" id="dlerr5">Please fill in all fields to continue.</div>
+        <div class="dlnav">
+          <button class="dlbtn-back" onclick="prevDlQ(4)">&#8592; Back</button>
+          <button class="dlbtn-next" id="dlSubmitBtn" onclick="submitDlForm()">Send Me the Link &#8594;</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="dlresult" id="dlSuccess">
+      <div class="dlresult-icon">&#x2705;</div>
+      <div class="dlresult-title" id="dlSuccessTitle">Here Is Your Free Resource!</div>
+      <div class="dlresult-sub" id="dlSuccessSub">
+        Your download is ready. Click the button below to open it now.
+      </div>
+      <a id="dlDownloadBtn" href="#" class="dlresult-btn primary" target="_blank" rel="noopener">
+        &#8595; Open My Free Download
+      </a>
+      <div id="dlBonusResource" style="margin-top:12px;padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;text-align:left;">
+        <div style="font-size:11px;font-weight:700;color:#64748B;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">Also Available — Free</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+          <span id="dlBonusLabel" style="font-size:13px;color:#94A3B8;line-height:1.4;"></span>
+          <a id="dlBonusBtn" href="#" target="_blank" rel="noopener" style="font-size:12px;font-weight:700;color:#3B82F6;text-decoration:none;white-space:nowrap;flex-shrink:0;padding:6px 12px;border:1px solid rgba(59,130,246,0.3);border-radius:4px;transition:all 0.2s;">Get It Free &#8594;</a>
+        </div>
+      </div>
+      <button class="dlresult-btn secondary" onclick="closeDlPopup()" style="margin-top:10px;">Close</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- Carousel JS (original) -->
+<script>
+  const carousel = document.getElementById('carousel');
+  if (carousel) {
+    const cards = carousel.querySelectorAll('.card');
+    const dots  = carousel.querySelectorAll('.dot');
+    let current = 0;
+    function showCard(n) {
+      cards.forEach(function(c,i){ c.style.display = i===n?'block':'none'; });
+      dots.forEach(function(d,i){ d.classList.toggle('active',i===n); });
+      current = n;
+    }
+    showCard(0);
+    document.querySelectorAll('.carousel-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var dir = parseInt(btn.dataset.dir||0);
+        showCard((current + dir + cards.length) % cards.length);
+      });
+    });
+    dots.forEach(function(dot,i){ dot.addEventListener('click', function(){ showCard(i); }); });
+  }
+</script>
+
+<!-- Download Popup JS -->
+<script>
+var DL_WEBHOOK = 'https://hook.eu1.make.com/45ltiptmoe3p0o2igyfgsqs2b7olo549';
+var DL_WA_BASE = 'https://wa.me/2348029234994?text=';
+var dlAnswers  = {};
+var dlResource = '';
+
+var dlTitles = {
+  playbook:   { badge: 'Free PDF Download', title: 'Get Your Free ABC Solar Lead Playbook'    },
+  calculator: { badge: 'Free Tool',         title: 'Get Your Free ABC Solar Load Calculator'  }
+};
+
+function openDownloadPopup(resource) {
+  dlResource = resource || 'playbook';
+  var info = dlTitles[dlResource] || dlTitles.playbook;
+  document.getElementById('dlModalBadge').textContent = info.badge;
+  document.getElementById('dlModalTitle').textContent = info.title;
+
+  dlAnswers = {};
+  document.querySelectorAll('.dlblock').forEach(function(b){ b.classList.remove('active'); });
+  document.getElementById('dlq1').classList.add('active');
+  document.querySelectorAll('.dlresult').forEach(function(r){ r.classList.remove('show'); });
+  document.querySelectorAll('.dloption').forEach(function(o){ o.classList.remove('selected'); });
+  document.querySelectorAll('.dlerr').forEach(function(e){ e.style.display = 'none'; });
+  ['dlfirst','dllast','dlphone','dlcity'].forEach(function(id){
+    var el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+  updateDlProgress(1);
+  document.getElementById('dlOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  if (typeof gtag !== 'undefined') gtag('event','download_popup_open',{event_category:'Download',event_label:dlResource});
+}
+
+function closeDlPopup() {
+  document.getElementById('dlOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleDlOverlayClick(e) {
+  if (e.target === document.getElementById('dlOverlay')) closeDlPopup();
+}
+
+function selectDlQ(el) {
+  var q = el.getAttribute('data-dq');
+  document.querySelectorAll('[data-dq="'+q+'"]').forEach(function(o){ o.classList.remove('selected'); });
+  el.classList.add('selected');
+  document.getElementById('dlerr'+q).style.display = 'none';
+  dlAnswers[q] = el.getAttribute('data-val');
+}
+
+function nextDlQ(from) {
+  if (!dlAnswers[from]) {
+    document.getElementById('dlerr'+from).style.display = 'block';
+    return;
+  }
+  var next = from + 1;
+  document.getElementById('dlq'+from).classList.remove('active');
+  document.getElementById('dlq'+next).classList.add('active');
+  updateDlProgress(next);
+}
+
+function prevDlQ(to) {
+  var from = to + 1;
+  document.getElementById('dlq'+from).classList.remove('active');
+  document.getElementById('dlq'+to).classList.add('active');
+  updateDlProgress(to);
+}
+
+function updateDlProgress(step) {
+  var total = 5;
+  var pct = ((step - 1) / (total - 1)) * 100;
+  document.getElementById('dlProgressFill').style.width = pct + '%';
+  for (var i = 1; i <= total; i++) {
+    var node = document.getElementById('dlsn'+i);
+    var line = document.getElementById('dlsl'+i);
+    if (!node) continue;
+    node.classList.remove('active','done');
+    if      (i < step)   { node.classList.add('done');   node.textContent = String.fromCharCode(10003); }
+    else if (i === step)  { node.classList.add('active'); node.textContent = i; }
+    else                  { node.textContent = i === 5 ? String.fromCharCode(10003) : i; }
+    if (line) {
+      if (i < step) line.classList.add('done');
+      else          line.classList.remove('done');
+    }
+  }
+}
+
+function submitDlForm() {
+  var first = document.getElementById('dlfirst').value.trim();
+  var last  = document.getElementById('dllast').value.trim();
+  var phone = document.getElementById('dlphone').value.trim();
+  var city  = document.getElementById('dlcity').value.trim();
+  var err   = document.getElementById('dlerr5');
+
+  if (!first || !last || !phone || !city) {
+    err.textContent = 'Please fill in all fields to continue.';
+    err.style.display = 'block';
+    return;
+  }
+  err.style.display = 'none';
+
+  var btn = document.getElementById('dlSubmitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  var resourceLabel = dlResource === 'calculator' ? 'ABC Solar Load Calculator' : 'ABC Solar Lead Playbook';
+  var payload = {
+    timestamp:        new Date().toISOString(),
+    first_name:       first,
+    last_name:        last,
+    name:             first + ' ' + last,
+    phone:            phone,
+    city:             city,
+    ad_spend:         dlAnswers[1] || '',
+    monthly_installs: dlAnswers[2] || '',
+    pain_point:       dlAnswers[3] || '',
+    team_readiness:   dlAnswers[4] || '',
+    resource:         dlResource,
+    source:           'website-download',
+    qualified:        'data-collection'
+  };
+
+  fetch(DL_WEBHOOK, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  }).catch(function(e){ console.error('Webhook error:', e); });
+
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'download_form_complete', {
+      event_category: 'Download',
+      event_label: dlResource,
+      value: 1
+    });
+  }
+
+  var dlLinks = {
+    playbook:   'https://drive.google.com/file/d/1hqrM6K_QiOXVn97-KodPyu7VSIfG8xXI/view?usp=sharing',
+    calculator: 'https://tubalcainmy.github.io/The-ABC-Solar-load-Calculator/'
+  };
+  var dlBtnLabels = {
+    playbook:   '&#128218; Open the ABC Playbook PDF',
+    calculator: '&#9889; Open the ABC Solar Load Calculator'
+  };
+  var dlSuccessTitles = {
+    playbook:   'Your Free Playbook Is Ready!',
+    calculator: 'Your Free Calculator Is Ready!'
+  };
+  var dlSuccessSubs = {
+    playbook:   'Click below to open the ABC Solar Lead Playbook PDF. Bookmark it for easy access.',
+    calculator: 'Click below to open the ABC Solar Load Calculator. Bookmark it &#8212; it works fully offline on site visits.'
+  };
+  document.getElementById('dlDownloadBtn').href           = dlLinks[dlResource]      || dlLinks.playbook;
+  document.getElementById('dlDownloadBtn').innerHTML      = dlBtnLabels[dlResource]  || dlBtnLabels.playbook;
+  document.getElementById('dlSuccessTitle').textContent   = dlSuccessTitles[dlResource] || dlSuccessTitles.playbook;
+  document.getElementById('dlSuccessSub').innerHTML       = dlSuccessSubs[dlResource]   || dlSuccessSubs.playbook;
+
+  // Bonus resource — the OTHER tool, no form needed
+  var otherResource = dlResource === 'playbook' ? 'calculator' : 'playbook';
+  var dlBonusLabels = {
+    playbook:   '&#128218; Also want the ABC Solar Lead Playbook PDF?',
+    calculator: '&#9889; Also want the ABC Solar Load Calculator? (works offline)'
+  };
+  document.getElementById('dlBonusBtn').href      = dlLinks[otherResource];
+  document.getElementById('dlBonusLabel').innerHTML = dlBonusLabels[otherResource];
+
+  document.querySelectorAll('.dlblock').forEach(function(b){ b.classList.remove('active'); });
+  document.getElementById('dlProgressFill').style.width = '100%';
+  document.getElementById('dlSuccess').classList.add('show');
+
+  btn.disabled = false;
+  btn.textContent = 'Send Me the Link';
+}
+</script>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TZ6FE345VT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TZ6FE345VT', {'send_page_view': true});
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.btn-primary').forEach(function(button) {
+      button.addEventListener('click', function() {
+        gtag('event', 'button_click', {'event_category':'CTA','event_label':this.textContent.trim(),'value':1});
+      });
+    });
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'contact', {'event_category':'Contact','event_label':'WhatsApp','value':1});
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
