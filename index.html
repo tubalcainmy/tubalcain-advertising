@@ -1013,6 +1013,9 @@
     
         /* ── FREE RESOURCES SECTION ── */
         .free-resources-section { padding: 88px 0; background: #0B1120; border-top: 1px solid #1E293B; border-bottom: 1px solid #1E293B; }
+        .free-resources-section .section-badge { background: rgba(249,115,22,0.15); border: 1px solid rgba(249,115,22,0.25); color: #FBBF24; }
+        .free-resources-section .section-title { color: #F1F5F9; }
+        .free-resources-section .section-description { color: #94A3B8; }
         .download-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; max-width: 860px; margin-left: auto; margin-right: auto; }
         .download-card { background: #1E293B; border: 1px solid #334155; border-radius: 8px; padding: 32px; display: flex; flex-direction: column; gap: 16px; }
         .dl-blue  { border-top: 3px solid #3B82F6; }
@@ -1021,8 +1024,8 @@
         .dl-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
         .dl-badge-blue  { color: #3B82F6; }
         .dl-badge-amber { color: #F59E0B; }
-        .dl-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; color: #F5F0E8; line-height: 1.2; margin: 0; }
-        .dl-desc  { font-size: 14px; color: #F5F0E8; line-height: 1.65; margin: 0; }
+        .dl-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; color: #F1F5F9; line-height: 1.2; margin: 0; }
+        .dl-desc  { font-size: 14px; color: #94A3B8; line-height: 1.65; margin: 0; }
         .dl-features { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
         .dl-features li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: #94A3B8; line-height: 1.5; }
         .dl-check { font-weight: 700; flex-shrink: 0; }
@@ -1099,6 +1102,109 @@
         .dlresult-btn.secondary { background:transparent; border:1px solid #334155; color:#64748B; }
         .dlresult-btn.secondary:hover { border-color:#64748B; color:#CBD5E1; }
         @media (max-width:600px) { .dlmodal-head,.dlbody { padding-left:18px; padding-right:18px; } .dlprogress-wrap { padding-left:18px; padding-right:18px; } .dlfield-row { grid-template-columns:1fr; } .dlresult { padding-left:18px; padding-right:18px; } }
+
+        /* ── 90-Day Lead Nurture Add-On Section ── */
+        .nurture-ws { padding: 100px 0; background: var(--text-dark); position: relative; overflow: hidden; }
+        .nurture-ws::before { content: ''; position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 700px; height: 400px; background: radial-gradient(ellipse, rgba(34,197,94,0.08) 0%, transparent 65%); pointer-events: none; }
+        .nurture-ws::after  { content: ''; position: absolute; bottom: -100px; right: -60px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(251,191,36,0.05) 0%, transparent 65%); pointer-events: none; }
+        .nurture-ws .container { position: relative; z-index: 1; }
+        .nurture-ws .section-badge  { background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.25); color: #4ADE80; }
+        .nurture-ws .section-title  { color: #F5F0E8; }
+        .nurture-ws .section-description { color: #94A3B8; }
+
+        /* Problem bar */
+        .nws-problem-bar { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; border: 1px solid #1e1e1e; border-radius: 16px; overflow: hidden; margin: 44px 0 56px; background: #0d0d0d; }
+        .nws-pb-item { padding: 24px 26px; border-right: 1px solid #1e1e1e; }
+        .nws-pb-item:last-child { border-right: none; }
+        .nws-pb-label { font-size: 10px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #F87171; margin-bottom: 10px; display: flex; align-items: center; gap: 7px; }
+        .nws-pb-label::before { content: ''; width: 14px; height: 1px; background: #F87171; opacity: 0.4; }
+        .nws-pb-scenario { font-size: 13px; color: #6B7280; line-height: 1.65; font-style: italic; font-weight: 500; margin-bottom: 12px; }
+        .nws-pb-outcome { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #F87171; background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.15); padding: 4px 10px; border-radius: 100px; }
+
+        /* Main card */
+        .nws-card { background: #111; border: 1px solid rgba(34,197,94,0.2); border-top: 3px solid #22C55E; border-radius: 20px; overflow: hidden; position: relative; }
+        .nws-card::before { content: ''; position: absolute; top: 0; right: 0; width: 300px; height: 300px; background: radial-gradient(circle, rgba(34,197,94,0.04) 0%, transparent 65%); pointer-events: none; }
+
+        /* Head */
+        .nws-head { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: start; padding: 40px 40px 32px; border-bottom: 1px solid #1e1e1e; }
+        .nws-eyebrow { display: inline-flex; align-items: center; gap: 7px; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2); color: #4ADE80; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; margin-bottom: 18px; }
+        .nws-eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: #22C55E; animation: tagPulse 1.5s ease-in-out infinite; }
+        .nws-name { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900; color: #F5F0E8; line-height: 1.1; margin-bottom: 12px; }
+        .nws-name span { color: #22C55E; }
+        .nws-tagline { font-size: 15px; color: #64748B; line-height: 1.75; max-width: 520px; }
+
+        /* Price panel */
+        .nws-price-panel { background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.18); border-radius: 16px; padding: 26px 24px; text-align: center; min-width: 210px; flex-shrink: 0; }
+        .nws-price-tag { font-size: 10px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #4ADE80; margin-bottom: 10px; }
+        .nws-price { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 900; color: #22C55E; line-height: 1; margin-bottom: 6px; }
+        .nws-price-note { font-size: 12px; color: #64748B; line-height: 1.5; font-weight: 600; }
+        .nws-price-detail { margin-top: 14px; padding: 12px 14px; background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.12); border-radius: 10px; font-size: 12px; color: #6B7280; line-height: 1.6; text-align: left; }
+        .nws-price-detail strong { color: #22C55E; font-weight: 700; }
+        .nws-promo { margin-top: 12px; padding: 12px 14px; background: rgba(251,191,36,0.06); border: 1px solid rgba(251,191,36,0.18); border-radius: 10px; text-align: left; }
+        .nws-promo-label { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 5px; }
+        .nws-promo p { font-size: 11px; color: #6B7280; line-height: 1.6; margin: 0; }
+        .nws-promo p strong { color: var(--accent); }
+
+        /* Body */
+        .nws-body { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+        .nws-col { padding: 32px 40px; border-right: 1px solid #1e1e1e; }
+        .nws-col:last-child { border-right: none; }
+        .nws-col-label { font-size: 10px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #64748B; margin-bottom: 20px; }
+
+        /* SMS Timeline */
+        .nws-timeline { display: flex; flex-direction: column; gap: 0; position: relative; }
+        .nws-timeline::before { content: ''; position: absolute; left: 13px; top: 14px; bottom: 14px; width: 1px; background: #1e1e1e; }
+        .nws-week { display: flex; gap: 14px; align-items: flex-start; position: relative; z-index: 1; padding-bottom: 20px; }
+        .nws-week:last-child { padding-bottom: 0; }
+        .nws-week-dot { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #1e1e1e; background: #111; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 800; color: #444; flex-shrink: 0; }
+        .nws-week-dot.active { border-color: #22C55E; background: rgba(34,197,94,0.1); color: #22C55E; }
+        .nws-week-body { flex: 1; padding-top: 3px; }
+        .nws-week-title { font-size: 13px; font-weight: 700; color: #E2E8F0; margin-bottom: 4px; }
+        .nws-week-desc { font-size: 12px; color: #64748B; line-height: 1.6; }
+        .nws-sms-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 9px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #22C55E; background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.15); padding: 3px 9px; border-radius: 100px; margin-top: 6px; }
+
+        /* Includes */
+        .nws-includes { display: flex; flex-direction: column; gap: 12px; }
+        .nws-include-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: #9CA3AF; line-height: 1.55; }
+        .nws-include-item .feat-check { width: 18px; height: 18px; border-radius: 50%; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2); display: flex; align-items: center; justify-content: center; font-size: 10px; color: #22C55E; flex-shrink: 0; margin-top: 1px; }
+        .nws-include-item strong { color: #D1D5DB; font-weight: 700; }
+
+        /* Stats */
+        .nws-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; border-top: 1px solid #1e1e1e; }
+        .nws-stat { padding: 22px; text-align: center; border-right: 1px solid #1e1e1e; }
+        .nws-stat:last-child { border-right: none; }
+        .nws-stat-num { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; color: #22C55E; line-height: 1; margin-bottom: 5px; }
+        .nws-stat-label { font-size: 11px; color: #64748B; font-weight: 600; line-height: 1.4; }
+
+        /* CTA strip */
+        .nws-cta-strip { padding: 28px 40px; border-top: 1px solid #1e1e1e; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; background: rgba(34,197,94,0.03); }
+        .nws-cta-text { font-size: 14px; color: #94A3B8; line-height: 1.7; flex: 1; }
+        .nws-cta-text strong { color: #CBD5E1; }
+        .nws-cta-btn { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #16A34A, #22C55E); color: #fff; font-weight: 800; font-size: 15px; padding: 16px 28px; border-radius: 12px; text-decoration: none; transition: all 0.25s; box-shadow: 0 6px 20px rgba(34,197,94,0.25); white-space: nowrap; }
+        .nws-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(34,197,94,0.35); }
+        .nws-cta-btn .cta-arrow { width: 26px; height: 26px; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 13px; }
+
+        @media (max-width: 900px) {
+            .nws-head  { grid-template-columns: 1fr; }
+            .nws-body  { grid-template-columns: 1fr; }
+            .nws-col   { border-right: none; border-bottom: 1px solid #1e1e1e; }
+            .nws-col:last-child { border-bottom: none; }
+            .nws-stats { grid-template-columns: 1fr 1fr; }
+            .nws-stat:nth-child(2) { border-right: none; }
+            .nws-stat:nth-child(3),
+            .nws-stat:nth-child(4) { border-top: 1px solid #1e1e1e; }
+            .nws-stat:nth-child(4) { border-right: none; }
+            .nws-cta-strip { flex-direction: column; align-items: flex-start; }
+            .nws-cta-btn { width: 100%; justify-content: center; }
+            .nws-problem-bar { grid-template-columns: 1fr; }
+            .nws-pb-item { border-right: none; border-bottom: 1px solid #1e1e1e; }
+            .nws-pb-item:last-child { border-bottom: none; }
+        }
+        @media (max-width: 600px) {
+            .nws-head { padding: 28px 24px; }
+            .nws-col  { padding: 24px; }
+            .nws-cta-strip { padding: 24px; }
+        }
 </style>
 </head>
 <body>
@@ -1112,6 +1218,7 @@
                 <li><a href="#free-resources">Free Tools</a></li>
                 <li><a href="#offer">Packages</a></li>
                 <li><a href="#case-studies">Results</a></li>
+                <li><a href="#nurture">Nurture</a></li>
                 <li><a href="#guarantee">Guarantee</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1857,6 +1964,150 @@
             </div>
         </div>
     </section>
+
+    <!-- ═══════════════════════════════════
+         90-DAY LEAD NURTURE ADD-ON SECTION
+    ═══════════════════════════════════ -->
+    <section class="nurture-ws" id="nurture">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-badge">Add-On Service</span>
+          <h2 class="section-title">The Problem No One<br>Talks About.</h2>
+          <p class="section-description">Getting pre-qualified homeowners to your WhatsApp is step one. What happens next determines whether they become ₦2M jobs or silent numbers. Most installers lose deals not because of bad leads — but because of what happens after the lead arrives.</p>
+        </div>
+
+        <!-- 3 real scenarios -->
+        <div class="nws-problem-bar">
+          <div class="nws-pb-item">
+            <div class="nws-pb-label">Scenario 1</div>
+            <div class="nws-pb-scenario">"A qualified homeowner filled the form on Monday. By Friday your team finally messaged them. They had already booked a site visit with another installer."</div>
+            <div class="nws-pb-outcome">₦2M job — lost to speed</div>
+          </div>
+          <div class="nws-pb-item">
+            <div class="nws-pb-label">Scenario 2</div>
+            <div class="nws-pb-scenario">"You called within the hour. They said they were not ready yet. Your team moved on. Three weeks later that homeowner installed with a competitor who kept following up."</div>
+            <div class="nws-pb-outcome">₦1.8M job — lost to silence</div>
+          </div>
+          <div class="nws-pb-item">
+            <div class="nws-pb-label">Scenario 3</div>
+            <div class="nws-pb-scenario">"The lead said 'let me think about it.' Your team had no follow-up sequence, no value-add message, no reason to call back. The deal died without anyone knowing it was still alive."</div>
+            <div class="nws-pb-outcome">₦2.4M job — lost to no system</div>
+          </div>
+        </div>
+
+        <!-- Main card -->
+        <div class="nws-card">
+
+          <!-- Head -->
+          <div class="nws-head">
+            <div>
+              <div class="nws-eyebrow"><span class="nws-eyebrow-dot"></span>Optional Add-On — Available With Any Package</div>
+              <h3 class="nws-name">90-Day <span>Lead Nurture</span><br>System</h3>
+              <p class="nws-tagline">We follow up on every lead we deliver to you for 90 days — through a structured SMS sequence designed to re-engage, provide value, and move homeowners from "not yet" to "let's book a site visit." Your team focuses on closing. We handle the follow-up.</p>
+            </div>
+
+            <div class="nws-price-panel">
+              <div class="nws-price-tag">Full 90-Day System</div>
+              <div class="nws-price">₦100,000</div>
+              <div class="nws-price-note">per 50 leads &nbsp;·&nbsp; 90 days<br>billed as 2 months upfront</div>
+              <div class="nws-price-detail">
+                Covers up to <strong>50 leads</strong><br>
+                <strong>36 SMS touches</strong> per lead<br>
+                over <strong>12 weeks</strong>
+              </div>
+              <div class="nws-promo">
+                <div class="nws-promo-label">🎯 Best Value</div>
+                <p>Add to any <strong>2-month package</strong> and we run the full 90-day nurture on all leads from both months — at <strong>no extra charge</strong> on Month 3.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="nws-body">
+
+            <!-- Timeline -->
+            <div class="nws-col">
+              <div class="nws-col-label">The 12-Week SMS Sequence</div>
+              <div class="nws-timeline">
+
+                <div class="nws-week">
+                  <div class="nws-week-dot active">W1</div>
+                  <div class="nws-week-body">
+                    <div class="nws-week-title">Week 1 — Warm Welcome</div>
+                    <div class="nws-week-desc">3 SMS. Positions you as a certified expert. Sets expectations. Builds immediate trust before the first call.</div>
+                    <div class="nws-sms-badge">3 SMS this week</div>
+                  </div>
+                </div>
+
+                <div class="nws-week">
+                  <div class="nws-week-dot active">W2</div>
+                  <div class="nws-week-body">
+                    <div class="nws-week-title">Weeks 2–4 — Education &amp; Value</div>
+                    <div class="nws-week-desc">3 SMS per week. Power cost comparisons, solar ROI facts, homeowner success stories. Keeps you top of mind while building the homeowner's case for solar.</div>
+                    <div class="nws-sms-badge">9 SMS across 3 weeks</div>
+                  </div>
+                </div>
+
+                <div class="nws-week">
+                  <div class="nws-week-dot">W5</div>
+                  <div class="nws-week-body">
+                    <div class="nws-week-title">Weeks 5–8 — Urgency &amp; Social Proof</div>
+                    <div class="nws-week-desc">3 SMS per week. Results from homeowners in the same city. Price increase warnings. Seasonal NEPA data. Moves "thinking about it" to "I need to decide."</div>
+                    <div class="nws-sms-badge">12 SMS across 4 weeks</div>
+                  </div>
+                </div>
+
+                <div class="nws-week">
+                  <div class="nws-week-dot">W9</div>
+                  <div class="nws-week-body">
+                    <div class="nws-week-title">Weeks 9–12 — Final Close Window</div>
+                    <div class="nws-week-desc">3 SMS per week. Direct re-engagement. Limited availability messaging. Last-chance site visit offer. Designed to convert every remaining warm lead before the 90-day window closes.</div>
+                    <div class="nws-sms-badge">12 SMS across 4 weeks</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Includes -->
+            <div class="nws-col">
+              <div class="nws-col-label">What Is Included</div>
+              <div class="nws-includes">
+                <div class="nws-include-item"><span class="feat-check">✓</span><span><strong>36 SMS per lead over 90 days</strong> — 3 per week, every week, for the full 12-week window</span></div>
+                <div class="nws-include-item"><span class="feat-check">✓</span><span><strong>Custom SMS copy written for your city</strong> — Abuja, Lagos, Port Harcourt homeowners respond to different triggers. We localise every message.</span></div>
+                <div class="nws-include-item"><span class="feat-check">✓</span><span><strong>Fully automated delivery</strong> — messages fire on schedule without you or your team doing anything. Set and forget.</span></div>
+                <div class="nws-include-item"><span class="feat-check">✓</span><span><strong>Covers up to 50 leads</strong> — all leads generated during your active package period are eligible</span></div>
+                <div class="nws-include-item"><span class="feat-check">✓</span><span><strong>Re-engagement alerts</strong> — if a lead replies to any SMS you receive an instant notification so you can follow up while they are warm</span></div>
+                <div class="nws-include-item"><span class="feat-check">✓</span><span><strong>Monthly SMS delivery report</strong> — open rates, reply rates, and which leads are showing engagement worth pursuing</span></div>
+                <div class="nws-include-item"><span class="feat-check">✓</span><span><strong>Works alongside your existing follow-up</strong> — the SMS sequence runs in the background while your team handles calls and site visits</span></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Stats -->
+          <div class="nws-stats">
+            <div class="nws-stat"><div class="nws-stat-num">36</div><div class="nws-stat-label">SMS touches<br>per lead</div></div>
+            <div class="nws-stat"><div class="nws-stat-num">12</div><div class="nws-stat-label">weeks of<br>follow-up</div></div>
+            <div class="nws-stat"><div class="nws-stat-num">50</div><div class="nws-stat-label">leads covered<br>per period</div></div>
+            <div class="nws-stat"><div class="nws-stat-num">3×</div><div class="nws-stat-label">more conversions<br>vs no follow-up</div></div>
+          </div>
+
+          <!-- CTA strip -->
+          <div class="nws-cta-strip">
+            <div class="nws-cta-text">
+              <strong>Add the 90-Day Nurture System to any package.</strong> ₦100,000 for 90 days of automated SMS follow-up on up to 50 leads. Add to 2 months and Month 3 follow-up is free.
+            </div>
+            <a href="https://wa.me/2348029234994?text=Hi%20Mystery%2C%20I%20want%20to%20add%20the%2090-Day%20Lead%20Nurture%20System%20to%20my%20package" class="nws-cta-btn" target="_blank" rel="noopener">
+              Add This to My Package <span class="cta-arrow">→</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
