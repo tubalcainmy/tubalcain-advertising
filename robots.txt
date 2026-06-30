@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tubalcainmy.github.io/tubalcain-advertising/sitemap.xml
